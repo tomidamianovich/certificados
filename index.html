@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Certificados</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="./styles.css"></script>
+    </head>
+    <body>
+            <div class="container-fluid" style="
+            background-color:  #9aca3c;
+            height: 100%;
+            width: 100%;
+            ">
+            <div class="navbar-header" style="
+            height:  100%;
+            width:  100%;
+             ">
+            
+            <!-- Content -->
+            
+            <a href="https://www.gba.gob.ar/" ><img src="https://www.gba.gob.ar/imagenes/logo_gba_footer.svg" style="
+            margin-top: 2%;
+            margin-bottom: 2%;
+            margin-left:  8%;
+            padding-bottom: 0px;
+            width: 18%;
+        "></a>
+              
+        </div>
+         </div>
+         <img src="header.png" style="
+         margin-top: -2px;
+         width: 100%;
+     ">
+        
+       
+    
+    <h3 style="font-family: din;font-weight: 1000;font-size: 30px;color: #333333;margin-left: 10%;margin-top: 3%">Certificados "Mi Primera Licencia"</h3>
+    <p style="
+    font-family:  din;
+    width: 80%;
+    margin-left: 10%;
+    line-height: 25px;
+    margin-top: 2%;
+">En el marco de un convenio llamado "Mi Primer Licencia" del Ministerio de Gobierno con el Ministerio de Educación, se acordo para los alumnos de escuelas secundarias de 
+    la provincia de Buenos Aires la aprobación del Exámen Teorico necesario para la obtención de la licencia nacional de Conducir 
+emitida por la Dirección de Politica y Seguridad Vial a los alumnos que aprueben las materias correspondientes en el secundario.</p>
+    <div class="container">    
+        <div id="loginbox" style="margin-top: 3%;margin-bottom: 3%;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Ingrese su DNI</div>
+                      
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" style="width:  100%;">
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        <form id="busquedaform" class="form-horizontal" action="formulario.php" method="get">
+                                    
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="login-username" type="text" class="form-control" name="dni" value="" placeholder="Ej: 38405871">                                        
+                                    </div>
+                                
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                      <button id="btn-login" type="submit" class="btn boton">Generar Certificado  </button>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                            <div style="border-top: 1px solid#888;padding-top:15px;margin-bottom: -17px;font-size: 93%;">
+                                                    ¿Sos usuario designado para la Carga de Alumnos? 
+                                                <a href="#" onclick="$('#loginbox').hide(); $('#signupbox').show()">
+                                                    Ingresa aquí
+                                                </a>
+                                                </div>
+                                    </div>
+                                </div>    
+                            </form>     
+
+
+
+                        </div>                     
+                    </div>  
+        </div>
+        <div id="signupbox" style="display:none; margin-top:4%;margin-bottom: 4%;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Ingreso a Carga de Alumnos</div>
+                    
+                </div>  
+                <div class="panel-body" >
+                    <form id="signupform" class="form-horizontal" action="./cargar/login.php" method="POST">
+                        
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Nombre de Usuario">                                        
+                        </div>
+                    
+                <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="login-password" type="password" class="form-control" name="password" placeholder="Contraseña">
+                        </div>
+                        
+
+
+
+                    <div style="margin-top:10px" class="form-group">
+                        <!-- Button -->
+
+                        <div class="col-sm-12 controls">
+                          
+                          <button id="btn-login" type="submit" class="btn boton">Ingresar</button>
+                         
+
+                        </div>
+                    </div>
+                        
+                        
+                        
+                    </form>
+                 </div>
+            </div>
+
+       
+       
+        
+ </div> 
+</div>
+<div id="cargaralumnos" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">Ingreso a Carga de Alumnos</div>
+            
+        </div>  
+        <div class="panel-body" >
+            <form id="signupform" class="form-horizontal" role="form">
+                
+                <div style="margin-bottom: 25px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Nombre de Usuario">                                        
+                </div>
+            
+        <div style="margin-bottom: 25px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input id="login-password" type="password" class="form-control" name="password" placeholder="Contraseña">
+                </div>
+
+            <div style="margin-top:10px" class="form-group">
+                <!-- Button -->
+                <div class="col-sm-12 controls">
+                  <a id="btn-login" href="#" class="btn boton">Ingresar</a>
+               </div>
+            </div>
+            </form>
+         </div>
+    </div>
+
+</div> 
+</div>
+</body>
+<footer class="page-footer font-small blue pt-4 mt-4" style="
+    border-color:  #444;
+">
+
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row" style="
+    background-color: #444;
+">
+
+        <!-- Grid column -->
+        <div class="col-md-4 mt-md-0 mt-3">
+
+          <!-- Content -->
+          
+          <img src="https://www.gba.gob.ar/imagenes/logo_gba_footer.svg" style="
+          margin-top: 8%;
+          margin-bottom: 8%;
+      ">
+
+
+    </div>
+    <!-- Footer Links -->
+
+  </footer>
+
+<style>
+    .panel-info>.panel-heading{
+        background-color: #9ACA3C;
+    /* border-color: #9ACA3C; */
+    color: white;
+}    
+.boton{
+    color: #fff !important;
+    margin: auto !important;
+    width: 150px !important;
+    display: block !important;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+@font-face {
+  font-family: "din";
+  src: url("DINR.woff");
+}
+
+
+@font-face {
+   font-family: 'dinr';
+   font-style: normal;
+   font-weight: normal;
+   src: url('din');
+}
+    </style>
+</html>
